@@ -78,11 +78,40 @@
             padding: 10px;
             font-size: 14px;
         }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .header {
+                height: 300px;
+            }
+
+            .header h1 {
+                font-size: 32px;
+                padding: 0 10px;
+            }
+
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .navbar a {
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            .content {
+                padding: 10px;
+            }
+
+            .footer {
+                font-size: 12px;
+            }
+        }
     </style>
 </head>
 <body>
 
-    
     <!-- Header -->
     <div class="header">
         <h1> </h1>
@@ -106,7 +135,7 @@
 
     <!-- Footer -->
     <div class="footer">
-        © 2024 Astrochias - Todas los derechos reservados.
+        © 2024 Astrochias - Todos los derechos reservados.
     </div>
 
 </body>
