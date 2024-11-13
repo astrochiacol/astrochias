@@ -20,7 +20,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 40px;
+            padding: 10px 40px; /* Ajuste para más espacio */
             position: fixed;
             width: 100%;
             top: 0;
@@ -29,7 +29,7 @@
         }
 
         .top-bar img {
-            height: 50px;
+            height: 50px; /* Ajusta el tamaño del logo */
         }
 
         .navbar {
@@ -81,7 +81,7 @@
             background-image: url('images/chia2.png');
             background-size: cover;
             background-position: center;
-            height: 100vh;
+            height: 100vh; /* Toma el 100% del alto de la pantalla */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -139,22 +139,6 @@
             font-size: 14px;
         }
 
-        /* Sección "¿Quiénes somos?" con imagen en línea */
-        .who-we-are {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .who-we-are img {
-            max-width: 100%;
-            height: auto;
-            width: 200px; /* Ajusta el tamaño de la imagen */
-            border-radius: 8px;
-        }
-
         /* Responsive design */
         @media (max-width: 768px) {
             .top-bar {
@@ -164,7 +148,7 @@
             }
 
             .navbar {
-                display: none;
+                display: none; /* Ocultar menú de barra en móvil */
             }
 
             .menu-toggle {
@@ -177,7 +161,7 @@
             }
 
             .navbar-mobile {
-                display: none;
+                display: none; /* Inicia el menú oculto */
             }
 
             .content {
@@ -189,14 +173,14 @@
             }
 
             .header {
-                background-image: url('images/chia2.png');
+                background-image: url('images/chia2.png'); /* Cambié a chia1.png */
                 background-size: cover;
                 background-position: center;
-                height: 50vh;
+                height: 50vh; /* Ajusta la imagen */
             }
 
             .header h1 {
-                font-size: 36px;
+                font-size: 36px; /* Ajusta el tamaño del texto */
             }
         }
     </style>
@@ -214,8 +198,12 @@
             <a href="blog.html">Blog</a>
             <a href="join.html">Únete</a>
             <a href="contact.html">Contacto</a>
+            <a></a>
+            <a></a>
+            <a></a>
         </div>
-        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <!-- Botón de menú en dispositivos móviles -->
+        <div class="menu-toggle" onclick="toggleMenu()">☰ </div>
     </div>
 
     <!-- Menú desplegable para móviles -->
@@ -229,13 +217,18 @@
         <a href="contact.html">Contacto</a>
     </div>
 
+    <!-- Imagen de fondo -->
+    <div class="header">
+        <h1> </h1>
+    </div>
+
     <!-- Sección principal -->
     <div class="content">
-        <div class="who-we-are">
+        <div>
             <h2>¿Quiénes somos?</h2>
-            <img src="images/infografías/CHIAs.jpg" alt="Imagen de CHIA">
+            <p>Somos una Asociación voluntaria de profesionales que ejercen en las áreas de Astrofísica y Ciencias del Espacio en Colombia y alrededor del mundo, que propende por la equidad de género y la inclusión tanto en etapas de formación como en el ejercicio de la investigación en estas áreas. CHIA nace en 2018 en el marco de una discusión entre varias colegas sobre la baja participación y poca visibilidad del trabajo de mujeres y minorías en Ciencias del Espacio en Colombia. El 8 de Marzo de 2019 se consolida una base de datos de mujeres colombianas y con lazos con Colombia involucradas en investigación en Ciencias del Espacio, desde últimos semestres de pregrado hasta posiciones como investigadoras(es) de planta. Los resultados preliminares de este censo se presentaron en el VI Congreso Colombiano de Astronomía (COCOA) en Octubre de 2019, durante un conversatorio donde se evidenció la necesidad de organizarnos para dar visibilidad a nuestro trabajo y así aumentar nuestra representación en los diferentes niveles académicos. Se introdujo entonces de manera formal el colectivo Colombianas Haciendo Investigación en Astrociencias (CHIA) a la comunidad Astronómica del país, teniendo una gran acogida. La sigla CHIA además,  hace referencia y homenaje a la diosa Muisca que representa a la Luna retomando la cosmogonía de nuestros antepasados. </p>
         </div>
-        <p>Somos una Asociación voluntaria de profesionales que ejercen en las áreas de Astrofísica y Ciencias del Espacio en Colombia y alrededor del mundo...</p>
+
     </div>
 
     <!-- Información de contacto -->
@@ -252,6 +245,7 @@
     </div>
 
     <script>
+        // Función para mostrar y ocultar el menú en dispositivos móviles
         function toggleMenu() {
             const navbarMobile = document.querySelector('.navbar-mobile');
             navbarMobile.style.display = navbarMobile.style.display === 'flex' ? 'none' : 'flex';
