@@ -6,7 +6,6 @@
     <title>Astrochias</title>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@800&family=Azo+Sans:wght@400&display=swap" rel="stylesheet">
     <style>
-        /* General layout */
         body {
             font-family: 'Azo Sans', sans-serif;
             margin: 0;
@@ -41,6 +40,7 @@
             display: flex;
             justify-content: center;
             padding: 10px;
+            position: relative;
         }
 
         .navbar a {
@@ -49,6 +49,8 @@
             padding: 10px 20px;
             font-weight: bold;
             font-size: 16px;
+            display: inline-block; /* Added for alignment */
+            text-align: center; /* Ensures alignment */
         }
 
         .navbar a:hover {
@@ -56,14 +58,44 @@
             border-radius: 5px;
         }
 
+        /* Dropdown menu */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #642382;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #eb5a64;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
         /* Main content area */
         .content {
             padding: 20px;
             color: #642382;
             text-align: justify;
+            max-width: 800px;
+            margin: auto;
         }
 
-        /* Titles */
         h2 {
             font-family: 'Jost', sans-serif;
             color: #642382;
@@ -120,8 +152,15 @@
     <!-- Navbar -->
     <div class="navbar">
         <a href="index.html">Inicio</a>
-        <a href="about.html">¿Quiénes somos?</a>
-        <a href="events.html">Eventos </a>
+        <div class="dropdown">
+            <a href="#">¿Quiénes somos?</a>
+            <div class="dropdown-content">
+                <a href="mision.html">Misión</a>
+                <a href="vision.html">Visión</a>
+                <a href="objetivos.html">Objetivos</a>
+            </div>
+        </div>
+        <a href="events.html">Eventos</a>
         <a href="blog.html">Blog</a>
         <a href="join.html">Únete</a>
         <a href="contact.html">Contacto</a>
