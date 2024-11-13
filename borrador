@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astrochias</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@800&family=Azo+Sans:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Azo Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        /* Header section */
+        .header {
+            background-image: url('images/chia2.png');
+            background-size: cover;
+            background-position: center;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-family: 'Jost', sans-serif;
+            font-size: 48px;
+            font-weight: 800;
+            margin: 0;
+            color: #f07855;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #642382;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            position: relative;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            font-size: 16px;
+            display: inline-block; /* Added for alignment */
+            text-align: center; /* Ensures alignment */
+        }
+
+        .navbar a:hover {
+            background-color: #eb5a64;
+            border-radius: 5px;
+        }
+
+        /* Dropdown menu */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #642382;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #eb5a64;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Main content area */
+        .content {
+            padding: 20px;
+            color: #642382;
+            text-align: justify;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h2 {
+            font-family: 'Jost', sans-serif;
+            color: #642382;
+            font-weight: 800;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #642382;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .header {
+                height: 300px;
+            }
+
+            .header h1 {
+                font-size: 32px;
+                padding: 0 10px;
+            }
+
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .navbar a {
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            .content {
+                padding: 10px;
+            }
+
+            .footer {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <h1> </h1>
+    </div>
+
+
+        <!-- Navbar -->
+    <div class="navbar">
+        <a href="index.html">Inicio</a>
+        <a href="about.html">Sobre CHIA</a>
+        <a href="juntadirectiva.html">Junta Directiva</a>
+        <a href="events.html">Eventos</a>
+        <a href="blog.html">Blog</a>
+        <a href="join.html">Únete</a>
+        <a href="contact.html">Contacto</a>
+    </div>
+
+
+    
+
+    <!-- Main content -->
+    <div class="content">
+        <h2>Bienvenidas y bienvenidos a Astrochias</h2>
+        <p>Esta es una plataforma dedicada a la visibilización de mujeres colombianas en astrociencias. Nuestro objetivo es promover la inclusión y fomentar el desarrollo de una comunidad científica diversa.</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        © 2024 Astrochias - Todos los derechos reservados.
+    </div>
+
+</body>
+</html>
