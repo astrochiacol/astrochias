@@ -11,6 +11,7 @@
             margin: 0;
             padding: 0;
             background-color: #f9f9f9;
+            overflow-x: hidden; /* Evitar el desbordamiento horizontal */
         }
 
         /* Barra superior */
@@ -22,8 +23,11 @@
             align-items: center;
             padding: 10px 20px;
             position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
             z-index: 10;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .top-bar img {
@@ -44,6 +48,11 @@
 
         .navbar a:hover {
             color: #eb5a64;
+        }
+
+        /* Ajuste del contenido cuando la barra superior está fija */
+        body {
+            padding-top: 70px; /* Agregar espacio para la barra superior */
         }
 
         /* Imagen de fondo */
@@ -108,7 +117,7 @@
             font-size: 14px;
         }
 
-        /* Responsive design */
+        /* Diseño Responsivo */
         @media (max-width: 768px) {
             .top-bar {
                 flex-direction: column;
@@ -126,6 +135,21 @@
 
             .footer {
                 font-size: 12px;
+            }
+
+            .header h1 {
+                font-size: 32px; /* Ajustar tamaño del texto en móviles */
+            }
+        }
+
+        /* Ajustes de barra superior para pantallas grandes */
+        @media (min-width: 1024px) {
+            .top-bar {
+                padding: 15px 30px;
+            }
+
+            .navbar a {
+                font-size: 18px;
             }
         }
     </style>
@@ -148,7 +172,7 @@
 
     <!-- Imagen de fondo -->
     <div class="header">
-        <h1>Bienvenidos a Astrochias</h1>
+        <h1> </h1>
     </div>
 
     <!-- Sección principal -->
@@ -172,3 +196,4 @@
 
 </body>
 </html>
+
