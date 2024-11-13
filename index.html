@@ -3,45 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@800&family=Azo+Sans&display=swap" rel="stylesheet">
+    <title>Astrochias</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@800&family=Azo+Sans:wght@400&display=swap" rel="stylesheet">
     <style>
         /* General layout */
         body {
             font-family: 'Azo Sans', sans-serif;
             margin: 0;
+            padding: 0;
             background-color: #f9f9f9;
         }
 
-        /* Header */
+        /* Header section */
         .header {
             background-image: url('images/chia2.png');
             background-size: cover;
             background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
             text-align: center;
-            color: #ffffff;
-            padding: 200px 20px;
         }
 
         .header h1 {
             font-family: 'Jost', sans-serif;
+            font-size: 48px;
             font-weight: 800;
-            font-size: 2.5em;
             margin: 0;
+            color: #f07855;
         }
 
         /* Navbar */
         .navbar {
+            background-color: #642382;
             display: flex;
             justify-content: center;
-            background-color: #642382;
-            padding: 15px;
+            padding: 10px;
         }
 
         .navbar a {
-            color: #ffffff;
-            padding: 10px 20px;
+            color: white;
             text-decoration: none;
+            padding: 10px 20px;
             font-weight: bold;
+            font-size: 16px;
         }
 
         .navbar a:hover {
@@ -52,38 +59,35 @@
         /* Main content area */
         .content {
             padding: 20px;
-            color: #333333;
-            max-width: 800px;
-            margin: auto;
+            color: #642382;
             text-align: justify;
         }
 
+        /* Titles */
         h2 {
             font-family: 'Jost', sans-serif;
-            color: #f07855;
+            color: #642382;
+            font-weight: 800;
         }
 
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2em;
-            }
-
-            .navbar a {
-                padding: 8px 15px;
-            }
+        /* Footer */
+        .footer {
+            background-color: #642382;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Section --
+    <!-- Header -->
     <div class="header">
         <h1>Astrochias</h1>
     </div>
-    >
 
-    <!-- Navigation Bar -->
+    <!-- Navbar -->
     <div class="navbar">
         <a href="index.html">HOME</a>
         <a href="about.html">ABOUT</a>
@@ -93,10 +97,15 @@
         <a href="contact.html">CONTACTO</a>
     </div>
 
-    <!-- Main Content -->
+    <!-- Main content -->
     <div class="content">
-        <h2>Bienvenido a Astrochias</h2>
-        <p>Esta es una comunidad de mujeres colombianas dedicadas a la astrofísica y las ciencias espaciales. Promovemos la equidad de género y apoyamos a las futuras generaciones de científicas a través de redes, actividades educativas y oportunidades de colaboración.</p>
+        <h2>Bienvenidos a Astrochias</h2>
+        <p>Esta es una plataforma dedicada a la visibilización de mujeres colombianas en astrociencias. Nuestro objetivo es promover la inclusión y fomentar el desarrollo de una comunidad científica diversa.</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        © 2024 Astrochias - Todas los derechos reservados.
     </div>
 
 </body>
