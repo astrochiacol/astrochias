@@ -104,12 +104,30 @@
             text-align: justify;
             max-width: 800px;
             margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
         }
 
         h2 {
             font-family: 'Jost', sans-serif;
             color: #642382;
             font-weight: 800;
+            flex-basis: 100%;
+        }
+
+        .image-container {
+            flex-basis: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .image-container img {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
         }
 
         /* Información de contacto */
@@ -198,15 +216,10 @@
             <a href="blog.html">Blog</a>
             <a href="join.html">Únete</a>
             <a href="contact.html">Contacto</a>
-            <a></a>
-            <a></a>
-            <a></a>
         </div>
-        <!-- Botón de menú en dispositivos móviles -->
         <div class="menu-toggle" onclick="toggleMenu()">☰ </div>
     </div>
 
-    <!-- Menú desplegable para móviles -->
     <div class="navbar-mobile">
         <a href="index.html">Inicio</a>
         <a href="about.html">Sobre CHIA</a>
@@ -217,18 +230,17 @@
         <a href="contact.html">Contacto</a>
     </div>
 
-    <!-- Imagen de fondo -->
-    <div class="header">
-        <h1> </h1>
-    </div>
-
     <!-- Sección principal -->
     <div class="content">
-        <h2>¿Quiénes somos?</h2>
-        <p> Somos una Asociación voluntaria de profesionales que ejercen en las áreas de Astrofísica y Ciencias del Espacio en Colombia y alrededor del mundo, que propende por la equidad de género y la inclusión tanto en etapas de formación como en el ejercicio de la investigación en estas áreas. CHIA nace en 2018 en el marco de una discusión entre varias colegas sobre la baja participación y poca visibilidad del trabajo de mujeres y minorías en Ciencias del Espacio en Colombia. El 8 de Marzo de 2019 se consolida una base de datos de mujeres colombianas y con lazos con Colombia involucradas en investigación en Ciencias del Espacio, desde últimos semestres de pregrado hasta posiciones como investigadoras(es) de planta. Los resultados preliminares de este censo se presentaron en el VI Congreso Colombiano de Astronomía (COCOA) en Octubre de 2019, durante un conversatorio donde se evidenció la necesidad de organizarnos para dar visibilidad a nuestro trabajo y así aumentar nuestra representación en los diferentes niveles académicos. Se introdujo entonces de manera formal el colectivo Colombianas Haciendo Investigación en Astrociencias (CHIA) a la comunidad Astronómica del país, teniendo una gran acogida. La sigla CHIA además,  hace referencia y homenaje a la diosa Muisca que representa a la Luna retomando la cosmogonía de nuestros antepasados.</p>
+        <div>
+            <h2>¿Quiénes somos?</h2>
+            <p>Somos una Asociación voluntaria de profesionales que ejercen en las áreas de Astrofísica y Ciencias del Espacio en Colombia y alrededor del mundo...</p>
+        </div>
+        <div class="image-container">
+            <img src="images/CHIAs.jpg" alt="Imagen de CHIA">
+        </div>
     </div>
 
-    <!-- Información de contacto -->
     <div class="contact-info">
         <h3>Contacto</h3>
         <p>Si tienes alguna pregunta o deseas más información, no dudes en escribirnos a:</p>
@@ -236,13 +248,11 @@
         <p>Teléfono: +57 123 456 789</p>
     </div>
 
-    <!-- Footer -->
     <div class="footer">
         © 2024 Astrochias - Todos los derechos reservados.
     </div>
 
     <script>
-        // Función para mostrar y ocultar el menú en dispositivos móviles
         function toggleMenu() {
             const navbarMobile = document.querySelector('.navbar-mobile');
             navbarMobile.style.display = navbarMobile.style.display === 'flex' ? 'none' : 'flex';
