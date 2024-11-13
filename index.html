@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astrochias</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General layout */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+
+        /* Top navigation bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #4A0A7A;
+            padding: 15px;
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar img {
+            height: 60px;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 15px;
+            font-weight: 500;
+        }
+
+        .navbar a:hover {
+            color: #A475C7;
+        }
+
+        /* Main content area */
+        .content {
+            margin-top: 100px; /* Space for the navbar */
+            padding: 20px;
+            color: black;
+        }
+
+        /* Title style */
+        h1 {
+            text-align: center;
+            color: #4A0A7A;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        /* Horizontal line */
+        hr {
+            border: none;
+            border-top: 2px dashed #4A0A7A;
+            margin: 10px 0;
+        }
+
+        /* Justify text */
+        .content p {
+            text-align: justify;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .navbar a {
+                padding: 0 10px;
+                font-size: 14px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top navigation bar -->
+    <div class="navbar">
+        <img src="image/chia1.jpg" alt="Astrochias Logo">
+        <div>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="events.html">Events</a>
+            <a href="blog.html">Blog</a>
+            <a href="join.html">Únete</a>
+            <a href="contact.html">Contacto</a>
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="content">
+        <h1>Bienvenido a Astrochias</h1>
+        <hr>
+        <p>Esta es la página de inicio. Aquí puedes agregar información de introducción sobre el proyecto y la comunidad Astrochias.</p>
+    </div>
+
+</body>
+</html>
