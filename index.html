@@ -11,7 +11,6 @@
             margin: 0;
             padding: 0;
             background-color: #f9f9f9;
-            overflow-x: hidden; /* Evitar el desbordamiento horizontal */
         }
 
         /* Barra superior */
@@ -23,11 +22,10 @@
             align-items: center;
             padding: 10px 20px;
             position: fixed;
-            top: 0;
-            left: 0;
             width: 100%;
             z-index: 10;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            top: 0;
+            left: 0;
         }
 
         .top-bar img {
@@ -50,9 +48,42 @@
             color: #eb5a64;
         }
 
-        /* Ajuste del contenido cuando la barra superior está fija */
-        body {
-            padding-top: 70px; /* Agregar espacio para la barra superior */
+        /* Menú desplegable en móvil */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .menu-toggle div {
+            width: 25px;
+            height: 3px;
+            background-color: #642382;
+        }
+
+        .navbar-mobile {
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+            background-color: #fff;
+            padding: 20px;
+            position: absolute;
+            top: 60px; /* Ajuste según el alto de la barra */
+            left: 0;
+            width: 100%;
+            z-index: 9;
+        }
+
+        .navbar-mobile a {
+            color: #642382;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .navbar-mobile a:hover {
+            color: #eb5a64;
         }
 
         /* Imagen de fondo */
@@ -83,6 +114,7 @@
             text-align: justify;
             max-width: 800px;
             margin: auto;
+            margin-top: 80px; /* Ajuste para la barra superior fija */
         }
 
         h2 {
@@ -117,7 +149,7 @@
             font-size: 14px;
         }
 
-        /* Diseño Responsivo */
+        /* Responsive design */
         @media (max-width: 768px) {
             .top-bar {
                 flex-direction: column;
@@ -125,8 +157,15 @@
             }
 
             .navbar {
-                flex-direction: column;
-                align-items: center;
+                display: none; /* Ocultamos la barra de navegación en móvil */
+            }
+
+            .menu-toggle {
+                display: flex; /* Mostramos el icono del menú */
+            }
+
+            .navbar-mobile {
+                display: flex; /* Mostramos el menú móvil cuando se active */
             }
 
             .content {
@@ -135,21 +174,6 @@
 
             .footer {
                 font-size: 12px;
-            }
-
-            .header h1 {
-                font-size: 32px; /* Ajustar tamaño del texto en móviles */
-            }
-        }
-
-        /* Ajustes de barra superior para pantallas grandes */
-        @media (min-width: 1024px) {
-            .top-bar {
-                padding: 15px 30px;
-            }
-
-            .navbar a {
-                font-size: 18px;
             }
         }
     </style>
@@ -168,6 +192,23 @@
             <a href="join.html">Únete</a>
             <a href="contact.html">Contacto</a>
         </div>
+        <!-- Icono del menú móvil -->
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!-- Menú desplegable en móvil -->
+    <div class="navbar-mobile">
+        <a href="index.html">Inicio</a>
+        <a href="about.html">Sobre CHIA</a>
+        <a href="juntadirectiva.html">Junta Directiva</a>
+        <a href="events.html">Eventos</a>
+        <a href="blog.html">Blog</a>
+        <a href="join.html">Únete</a>
+        <a href="contact.html">Contacto</a>
     </div>
 
     <!-- Imagen de fondo -->
@@ -194,6 +235,13 @@
         © 2024 Astrochias - Todos los derechos reservados.
     </div>
 
+    <script>
+        // Función para alternar el menú móvil
+        function toggleMenu() {
+            const navbarMobile = document.querySelector('.navbar-mobile');
+            navbarMobile.style.display = navbarMobile.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+
 </body>
 </html>
-
