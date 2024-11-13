@@ -1,91 +1,131 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AstroChias</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astrochias</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@800&family=Azo+Sans:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Azo Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        /* Header section with logo and navbar */
+        .header {
+            background-color: #642382;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .header img {
+            width: 150px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            flex-grow: 1;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .navbar a:hover {
+            background-color: #eb5a64;
+            border-radius: 5px;
+        }
+
+        /* Main content area */
+        .content {
+            padding: 20px;
+            color: #642382;
+            text-align: justify;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h2 {
+            font-family: 'Jost', sans-serif;
+            color: #642382;
+            font-weight: 800;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #642382;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .header img {
+                margin-bottom: 10px;
+            }
+
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .navbar a {
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            .content {
+                padding: 10px;
+            }
+
+            .footer {
+                font-size: 12px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <!-- INICIO -->
-  <section id="inicio">
-    <h1>Bienvenidos a AstroChias</h1>
-    <p>Exploramos y difundimos el conocimiento astronómico con un enfoque inclusivo y accesible para todos. En AstroChias encontrarás información sobre nuestra misión, visión, objetivos, el equipo detrás de esta iniciativa y nuestras redes de contacto.</p>
-  </section>
+    <!-- Header with logo and navbar -->
+    <div class="header">
+        <img src="images/chia1.png" alt="Logo de Astrochias">
+        <div class="navbar">
+            <a href="index.html">Inicio</a>
+            <a href="about.html">Sobre CHIA</a>
+            <a href="juntadirectiva.html">Junta Directiva</a>
+            <a href="events.html">Eventos</a>
+            <a href="blog.html">Blog</a>
+            <a href="join.html">Únete</a>
+            <a href="contact.html">Contacto</a>
+        </div>
+    </div>
 
-  <!-- SOBRE CHIA -->
-  <section id="sobre-chia">
-    <h2>Sobre CHIA</h2>
-    <h3>Misión</h3>
-    <p>Fomentar el conocimiento astronómico desde una perspectiva inclusiva, promoviendo la ciencia en comunidades diversas y acercando el universo a todos los públicos.</p>
+    <!-- Main content -->
+    <div class="content">
+        <h2>Bienvenidas y bienvenidos a Astrochias</h2>
+        <p>Esta es una plataforma dedicada a la visibilización de mujeres colombianas en astrociencias. Nuestro objetivo es promover la inclusión y fomentar el desarrollo de una comunidad científica diversa.</p>
+    </div>
 
-    <h3>Visión</h3>
-    <p>Ser un referente en divulgación astronómica que inspire a nuevas generaciones, integrando la ciencia con respeto a la diversidad cultural y de género.</p>
-
-    <h3>Objetivos</h3>
-    <ul>
-      <li>Promover la astronomía en comunidades y espacios educativos.</li>
-      <li>Visibilizar la importancia de la mujer en la ciencia.</li>
-      <li>Crear contenido educativo de calidad en temas astronómicos.</li>
-    </ul>
-
-    <h3>¿Quiénes Somos?</h3>
-    <p>Somos un colectivo comprometido con la divulgación científica y la inclusión. Nuestro equipo está formado por personas apasionadas por la astronomía y la igualdad de oportunidades en el conocimiento científico.</p>
-
-    <!-- Espacio para imágenes -->
-    <div class="image-gallery">
-      <img src="img/placeholder1.jpg" alt="Imagen de equipo 1">
-      <img src="img/placeholder2.jpg" alt="Imagen de equipo 2">
-      <img src="img/placeholder3.jpg" alt="Imagen de equipo 3">
+    <!-- Footer -->
+    <div class="footer">
+        © 2024 Astrochias - Todos los derechos reservados.
     </div>
-  </section>
-
-  <!-- JUNTA DIRECTIVA -->
-  <section id="junta-directiva">
-    <h2>Junta Directiva</h2>
-    <div class="directiva-member">
-      <img src="img/integrante1.jpg" alt="Integrante 1">
-      <h4>Nombre de Integrante 1</h4>
-      <p>Perfil breve de Integrante 1.</p>
-    </div>
-    <div class="directiva-member">
-      <img src="img/integrante2.jpg" alt="Integrante 2">
-      <h4>Nombre de Integrante 2</h4>
-      <p>Perfil breve de Integrante 2.</p>
-    </div>
-    <div class="directiva-member">
-      <img src="img/integrante3.jpg" alt="Integrante 3">
-      <h4>Nombre de Integrante 3</h4>
-      <p>Perfil breve de Integrante 3.</p>
-    </div>
-    <div class="directiva-member">
-      <img src="img/integrante4.jpg" alt="Integrante 4">
-      <h4>Nombre de Integrante 4</h4>
-      <p>Perfil breve de Integrante 4.</p>
-    </div>
-    <div class="directiva-member">
-      <img src="img/integrante5.jpg" alt="Integrante 5">
-      <h4>Nombre de Integrante 5</h4>
-      <p>Perfil breve de Integrante 5.</p>
-    </div>
-    <div class="directiva-member">
-      <img src="img/integrante6.jpg" alt="Integrante 6">
-      <h4>Nombre de Integrante 6</h4>
-      <p>Perfil breve de Integrante 6.</p>
-    </div>
-  </section>
-
-  <!-- CONTACTO -->
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>Síguenos en nuestras redes sociales para conocer más sobre nuestras actividades y eventos.</p>
-    <div class="social-links">
-      <a href="https://facebook.com/astrochia" target="_blank">Facebook</a>
-      <a href="https://instagram.com/astrochia" target="_blank">Instagram</a>
-      <a href="https://twitter.com/astrochia" target="_blank">Twitter</a>
-    </div>
-  </section>
 
 </body>
 </html>
