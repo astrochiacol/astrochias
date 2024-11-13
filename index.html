@@ -13,39 +13,61 @@
             background-color: #f9f9f9;
         }
 
-        /* Header section with logo and navbar */
-        .header {
-            background-color: #642382;
+        /* Barra superior */
+        .top-bar {
+            background-color: white;
+            color: #642382;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            z-index: 10;
         }
 
-        .header img {
-            width: 150px;
+        .top-bar img {
+            height: 50px; /* Ajusta el tamaño del logo */
         }
 
         .navbar {
             display: flex;
-            justify-content: space-around;
-            flex-grow: 1;
+            gap: 20px;
         }
 
         .navbar a {
-            color: white;
+            color: #642382;
             text-decoration: none;
-            padding: 10px 20px;
             font-weight: bold;
             font-size: 16px;
         }
 
         .navbar a:hover {
-            background-color: #eb5a64;
-            border-radius: 5px;
+            color: #eb5a64;
         }
 
-        /* Main content area */
+        /* Imagen de fondo */
+        .header {
+            background-image: url('images/chia2.png');
+            background-size: cover;
+            background-position: center;
+            height: 100vh; /* Toma el 100% del alto de la pantalla */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-family: 'Jost', sans-serif;
+            font-size: 48px;
+            font-weight: 800;
+            margin: 0;
+            color: #f07855;
+        }
+
+        /* Sección de contenido */
         .content {
             padding: 20px;
             color: #642382;
@@ -60,6 +82,23 @@
             font-weight: 800;
         }
 
+        /* Información de contacto */
+        .contact-info {
+            background-color: #642382;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .contact-info h3 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .contact-info p {
+            font-size: 16px;
+        }
+
         /* Footer */
         .footer {
             background-color: #642382;
@@ -71,23 +110,14 @@
 
         /* Responsive design */
         @media (max-width: 768px) {
-            .header {
+            .top-bar {
                 flex-direction: column;
-                text-align: center;
-            }
-
-            .header img {
-                margin-bottom: 10px;
+                align-items: center;
             }
 
             .navbar {
                 flex-direction: column;
-                text-align: center;
-            }
-
-            .navbar a {
-                padding: 10px;
-                font-size: 14px;
+                align-items: center;
             }
 
             .content {
@@ -102,9 +132,9 @@
 </head>
 <body>
 
-    <!-- Header with logo and navbar -->
-    <div class="header">
-        <img src="images/chia1.png" alt="Logo de Astrochias">
+    <!-- Barra superior -->
+    <div class="top-bar">
+        <img src="images/chia2.png" alt="Logo de Chia">
         <div class="navbar">
             <a href="index.html">Inicio</a>
             <a href="about.html">Sobre CHIA</a>
@@ -116,10 +146,23 @@
         </div>
     </div>
 
-    <!-- Main content -->
+    <!-- Imagen de fondo -->
+    <div class="header">
+        <h1>Bienvenidos a Astrochias</h1>
+    </div>
+
+    <!-- Sección principal -->
     <div class="content">
         <h2>Bienvenidas y bienvenidos a Astrochias</h2>
         <p>Esta es una plataforma dedicada a la visibilización de mujeres colombianas en astrociencias. Nuestro objetivo es promover la inclusión y fomentar el desarrollo de una comunidad científica diversa.</p>
+    </div>
+
+    <!-- Información de contacto -->
+    <div class="contact-info">
+        <h3>Contacto</h3>
+        <p>Si tienes alguna pregunta o deseas más información, no dudes en escribirnos a:</p>
+        <p>Email: contacto@astrochias.org</p>
+        <p>Teléfono: +57 123 456 789</p>
     </div>
 
     <!-- Footer -->
