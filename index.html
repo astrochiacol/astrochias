@@ -23,9 +23,9 @@
             padding: 10px 20px;
             position: fixed;
             width: 100%;
-            z-index: 10;
             top: 0;
             left: 0;
+            z-index: 10;
         }
 
         .top-bar img {
@@ -48,42 +48,31 @@
             color: #eb5a64;
         }
 
-        /* Menú desplegable en móvil */
+        /* Menú desplegable para móviles */
         .menu-toggle {
             display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-        }
-
-        .menu-toggle div {
-            width: 25px;
-            height: 3px;
-            background-color: #642382;
         }
 
         .navbar-mobile {
             display: none;
             flex-direction: column;
-            gap: 10px;
-            background-color: #fff;
-            padding: 20px;
+            align-items: center;
             position: absolute;
-            top: 60px; /* Ajuste según el alto de la barra */
+            top: 60px;
             left: 0;
             width: 100%;
-            z-index: 9;
+            background-color: white;
+            border-top: 2px solid #642382;
         }
 
         .navbar-mobile a {
-            color: #642382;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 18px;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
         }
 
         .navbar-mobile a:hover {
-            color: #eb5a64;
+            background-color: #eb5a64;
         }
 
         /* Imagen de fondo */
@@ -114,7 +103,6 @@
             text-align: justify;
             max-width: 800px;
             margin: auto;
-            margin-top: 80px; /* Ajuste para la barra superior fija */
         }
 
         h2 {
@@ -157,15 +145,20 @@
             }
 
             .navbar {
-                display: none; /* Ocultamos la barra de navegación en móvil */
+                display: none; /* Ocultar menú de barra */
             }
 
             .menu-toggle {
-                display: flex; /* Mostramos el icono del menú */
+                display: block;
+                background-color: #642382;
+                color: white;
+                padding: 10px;
+                cursor: pointer;
+                font-size: 18px;
             }
 
             .navbar-mobile {
-                display: flex; /* Mostramos el menú móvil cuando se active */
+                display: flex;
             }
 
             .content {
@@ -174,6 +167,17 @@
 
             .footer {
                 font-size: 12px;
+            }
+
+            .header {
+                background-image: url('images/chia1.png');
+                background-size: cover;
+                background-position: center;
+                height: 50vh; /* Ajusta la imagen */
+            }
+
+            .header h1 {
+                font-size: 36px; /* Ajusta el tamaño del texto */
             }
         }
     </style>
@@ -192,15 +196,11 @@
             <a href="join.html">Únete</a>
             <a href="contact.html">Contacto</a>
         </div>
-        <!-- Icono del menú móvil -->
-        <div class="menu-toggle" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+        <!-- Botón de menú en dispositivos móviles -->
+        <div class="menu-toggle" onclick="toggleMenu()">☰ Menú</div>
     </div>
 
-    <!-- Menú desplegable en móvil -->
+    <!-- Menú desplegable para móviles -->
     <div class="navbar-mobile">
         <a href="index.html">Inicio</a>
         <a href="about.html">Sobre CHIA</a>
@@ -236,12 +236,11 @@
     </div>
 
     <script>
-        // Función para alternar el menú móvil
+        // Función para mostrar y ocultar el menú en dispositivos móviles
         function toggleMenu() {
             const navbarMobile = document.querySelector('.navbar-mobile');
             navbarMobile.style.display = navbarMobile.style.display === 'flex' ? 'none' : 'flex';
         }
     </script>
-
 </body>
 </html>
