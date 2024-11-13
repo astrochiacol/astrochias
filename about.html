@@ -6,7 +6,6 @@
     <title>Astrochias</title>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@800&family=Azo+Sans:wght@400&display=swap" rel="stylesheet">
     <style>
-        /* General layout */
         body {
             font-family: 'Azo Sans', sans-serif;
             margin: 0;
@@ -41,6 +40,7 @@
             display: flex;
             justify-content: center;
             padding: 10px;
+            position: relative;
         }
 
         .navbar a {
@@ -56,6 +56,35 @@
             border-radius: 5px;
         }
 
+        /* Dropdown menu */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #642382;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #eb5a64;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
         /* Main content area */
         .content {
             padding: 20px;
@@ -65,7 +94,6 @@
             margin: auto;
         }
 
-        /* Titles */
         h2 {
             font-family: 'Jost', sans-serif;
             color: #642382;
@@ -116,14 +144,22 @@
 
     <!-- Header -->
     <div class="header">
-        <h1> </h1>
+        <h1>Astrochias</h1>
     </div>
 
     <!-- Navbar -->
     <div class="navbar">
         <a href="index.html">Inicio</a>
-        <a href="about.html">¿Quiénes somos?</a>
-        <a href="events.html">Eventos </a>
+        <div class="dropdown">
+            <a href="#">Nosotros</a>
+            <div class="dropdown-content">
+                <a href="quienes-somos.html">¿Quiénes somos?</a>
+                <a href="mision.html">Misión</a>
+                <a href="vision.html">Visión</a>
+                <a href="objetivos.html">Objetivos</a>
+            </div>
+        </div>
+        <a href="events.html">Eventos</a>
         <a href="blog.html">Blog</a>
         <a href="join.html">Únete</a>
         <a href="contact.html">Contacto</a>
@@ -131,32 +167,9 @@
 
     <!-- Main content -->
     <div class="content">
-        <section>
-            <h2>¿Quiénes somos?</h2>
-            <p>Somos una Asociación voluntaria de profesionales que ejercen en las áreas de Astrofísica y Ciencias del Espacio en Colombia y alrededor del mundo, que propende por la equidad de género y la inclusión tanto en etapas de formación como en el ejercicio de la investigación en estas áreas. CHIA nace en 2018 en el marco de una discusión entre varias colegas sobre la baja participación y poca visibilidad del trabajo de mujeres y minorías en Ciencias del Espacio en Colombia. El 8 de Marzo de 2019 se consolida una base de datos de mujeres colombianas y con lazos con Colombia involucradas en investigación en Ciencias del Espacio, desde últimos semestres de pregrado hasta posiciones como investigadoras(es) de planta. Los resultados preliminares de este censo se presentaron en el VI Congreso Colombiano de Astronomía (COCOA) en Octubre de 2019, durante un conversatorio donde se evidenció la necesidad de organizarnos para dar visibilidad a nuestro trabajo y así aumentar nuestra representación en los diferentes niveles académicos. Se introdujo entonces de manera formal el colectivo Colombianas Haciendo Investigación en Astrociencias (CHIA) a la comunidad Astronómica del país, teniendo una gran acogida. La sigla CHIA además,  hace referencia y homenaje a la diosa Muisca que representa a la Luna retomando la cosmogonía de nuestros antepasados. </p>
-        </section>
-
-        <section>
-            <h2>Misión</h2>
-            <p> Nuestra labor es la de dar visibilidad y exaltar el trabajo de mujeres y grupos minoritarios que tienen baja representación en la academia y propiciar el aumento de su participación en el mediano y largo plazo. Esta Asociación tiene  además un propósito logístico en la organización de diferentes proyectos, eventos y actividades que motiven a nuevas generaciones de Astrofísicas(os) colombianas(os). Así mismo, se propicia el crecimiento profesional de sus miembros a través de redes sólidas de contactos, obtención de recursos, colaboraciones y acceso a información sobre múltiples oportunidades. La Ciencia es un bien que pertenece a toda la sociedad y nuestra misión es la de alcanzar más mentes talentosas en Colombia que se atrevan a tomar el reto de explorar la belleza y complejidad del Universo, con una diversidad de visiones que aportarán de manera más eficiente a la producción de conocimiento científico en nuestro país. </p>
-        </section>
-
-        <section>
-            <h2>Visión</h2>
-            <p>Nuestro colectivo se proyecta como una organización pionera y líder en asuntos de género e inclusión en Ciencias del Espacio en Colombia y América Latina, conformada por una gran diversidad de profesionales que trabajan en instituciones alrededor del mundo. Lo anterior mediante la realización de múltiples eventos como conferencias, talleres, mentorías, asesorías institucionales, publicación de artículos, entre otros que materialicen el esfuerzo por crear una comunidad más equitativa e inclusiva. Queremos generar referentes tangibles en los que las próximas generaciones de AstroCientíficas(os) puedan inspirarse y apoyarse para la creación de sus proyectos profesionales. Asimismo deseamos extender nuestro alcance de divulgación científica para público general, incursionar en la aplicación de proyectos de ciencia ciudadana y asesoría científica a regiones rurales de nuestro país. Finalmente, consideramos fundamental generar lazos para trabajar de manera articulada con otros colectivos con objetivos similares en Colombia y Latinoamérica.</p>
-        
-        </section>
-
-        <section>
-            <h2>Objetivos</h2>
-            <ul>
-                <li>Implementar espacios de trabajo balanceados e inclusivos en Ciencia y Tecnología.</li>
-                <li>Publicar datos sobre la subrepresentación de mujeres en Ciencias del Espacio.</li>
-                <li>Proponer estrategias institucionales para aumentar la diversidad en la investigación.</li>
-                <li>Crear redes de colaboración y oportunidades de crecimiento profesional.</li>
-                <li>Generar lazos interinstitucionales para políticas inclusivas en formación académica.</li>
-            </ul>
-        </section>
+        <h2>¿Quiénes somos?</h2>
+        <p>Somos una Asociación voluntaria de profesionales que ejercen en las áreas de Astrofísica y Ciencias del Espacio...</p>
+        <!-- Puedes colocar el contenido de las otras secciones como Misión, Visión, Objetivos aquí -->
     </div>
 
     <!-- Footer -->
