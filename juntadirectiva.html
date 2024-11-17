@@ -49,6 +49,50 @@
             color: #eb5a64;
         }
 
+                /* Estilo del equipo */
+        .team {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 40px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .team-member {
+            display: flex;
+            align-items: center;
+            width: 30%;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-member img {
+            width: 80px; /* Tamaño fijo de las imágenes */
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-left: 20px;
+        }
+
+        .team-member div {
+            text-align: left;
+        }
+
+        .member-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #642382;
+        }
+
+        .member-profile {
+            font-size: 14px;
+            color: #555;
+        }
+
         /* Menú desplegable para móviles */
         .menu-toggle {
             display: none;
@@ -155,7 +199,20 @@
                 justify-content: space-between;
                 padding: 10px;
             }
+      /* Responsive */
+        @media (max-width: 768px) {
+            .team-member {
+                width: 100%;
+                margin-bottom: 20px;
+            }
 
+            .team-member img {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+
+
+            
             .navbar {
                 display: none; /* Ocultar menú de barra en móvil */
             }
