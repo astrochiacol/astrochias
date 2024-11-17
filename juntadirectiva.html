@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Junta Directiva - Astrochias</title>
+    <title>Sobre CHIA</title>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@800&family=Azo+Sans:wght@400&display=swap" rel="stylesheet">
     <style>
         body {
@@ -13,87 +13,130 @@
             background-color: #f9f9f9;
         }
 
-        /* Header section */
-        .header {
-            background-image: url('images/chia2.png');
-            background-size: cover;
-            background-position: center;
-            height: 600px;
+        /* Barra superior */
+        .top-bar {
+            background-color: white;
+            color: #642382;
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
+            padding: 10px 40px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 10;
         }
 
-        .header h1 {
-            font-family: 'Jost', sans-serif;
-            font-size: 48px;
-            font-weight: 800;
-            margin: 0;
-            color: #f07855;
+        .top-bar img {
+            height: 50px; /* Ajusta el tamaño del logo */
         }
 
-        /* Navbar */
         .navbar {
-            background-color: #642382;
             display: flex;
-            justify-content: center;
-            padding: 10px;
+            gap: 30px;
         }
 
         .navbar a {
-            color: white;
+            color: #642382;
             text-decoration: none;
-            padding: 10px 20px;
-            font-weight: bold;
+            font-family: 'Azo Sans', sans-serif;
             font-size: 16px;
+            font-weight: normal;
         }
 
         .navbar a:hover {
-            background-color: #eb5a64;
-            border-radius: 5px;
+            color: #eb5a64;
         }
 
-        /* Junta Directiva */
-        .team {
-            display: flex;
+        /* Menú desplegable para móviles */
+        .menu-toggle {
+            display: none;
+        }
+
+        .navbar-mobile {
+            display: none;
             flex-direction: column;
             align-items: center;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            border-top: 2px solid #642382;
+        }
+
+        .navbar-mobile a {
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .navbar-mobile a:hover {
+            background-color: #eb5a64;
+        }
+
+/* Encabezado */
+.header {
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    text-align: center; /* Centrado del texto */
+    background-color: #642382; /* Color de la franja */
+    width: 100%; /* Ancho completo */
+    height: 200px; /* Altura ajustable según necesidades */
+}
+
+/* Estilo del texto */
+.header h1 {
+    font-family: 'Jost', sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    color: #f07855; /* Color del texto */
+    margin: 50px 0 0 0;
+}
+
+
+        /* Sección de contenido */
+        .content {
+            padding: 20px;
+            color: #642382;
+            text-align: justify;
+            max-width: 800px;
+            margin: auto;
+            position: relative;
+            z-index: 1;
+            background-image: url('images/logoopaco2.png'); /* Imagen de fondo en el contenido */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: transparent;
+            padding: 40px;
+            border-radius: 8px;
+        }
+
+        h2 {
+            font-family: 'Jost', sans-serif;
+            color: #642382;
+            font-weight: 800;
+        }
+
+        /* Información de contacto */
+        .contact-info {
+            background-color: #642382;
+            color: white;
+            text-align: center;
             padding: 20px;
         }
 
-        .team-member {
-            display: flex;
-            align-items: center;
-            width: 100%;
-            max-width: 800px;
-            margin-bottom: 20px;
-            padding: 10px;
-            border: 1px solid #642382;
-            border-radius: 8px;
-            background-color: #fff;
-        }
-
-        .team-member img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-right: 20px;
-        }
-
-        .member-name {
-            font-size: 18px;
-            font-weight: bold;
-            color: #642382;
+        .contact-info h3 {
             margin: 0;
+            font-size: 24px;
+            font-family: 'Jost', sans-serif;
         }
 
-        .member-profile {
+        .contact-info p {
             font-size: 16px;
-            color: #642382;
-            margin: 5px 0 0;
         }
 
         /* Footer */
@@ -107,26 +150,66 @@
 
         /* Responsive design */
         @media (max-width: 768px) {
-            .team-member {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
+            .top-bar {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 10px;
             }
-            .team-member img {
-                margin: 0 0 10px 0;
+
+            .navbar {
+                display: none; /* Ocultar menú de barra en móvil */
+            }
+
+            .menu-toggle {
+                display: block;
+                background-color: #642382;
+                color: white;
+                padding: 10px;
+                cursor: pointer;
+                font-size: 18px;
+            }
+
+            .navbar-mobile {
+                display: none; /* Inicia el menú oculto */
+            }
+
+            .content {
+                padding: 10px;
+            }
+
+            .footer {
+                font-size: 12px;
+            }
+
+            .header h1 {
+                font-size: 36px; /* Ajusta el tamaño del texto */
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
-    <div class="header">
-        <h1> </h1>
+    <!-- Barra superior -->
+    <div class="top-bar">
+        <img src="images/logoCHIA_.png" alt="Logo de Chia">
+        <div class="navbar">
+            <a href="index.html">Inicio</a>
+            <a href="about.html">Sobre CHIA</a>
+            <a href="juntadirectiva.html">Junta Directiva</a>
+            <a href="events.html">Eventos</a>
+            <a href="blog.html">Blog</a>
+            <a href="join.html">Únete</a>
+            <a href="contact.html">Contacto</a>
+            <a></a>
+            <a></a>
+            <a></a>
+        </div>
+        <!-- Botón de menú en dispositivos móviles -->
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     </div>
 
-    <!-- Navbar -->
-    <div class="navbar">
+    <!-- Menú desplegable para móviles -->
+    <div class="navbar-mobile">
         <a href="index.html">Inicio</a>
         <a href="about.html">Sobre CHIA</a>
         <a href="juntadirectiva.html">Junta Directiva</a>
@@ -136,6 +219,18 @@
         <a href="contact.html">Contacto</a>
     </div>
 
+
+
+
+    <!-- Imagen de fondo y texto del encabezado -->
+    <div class="header">
+        <h1>Junta Directiva</h1>
+    </div>
+
+    <!-- Main content -->
+    <div class="content">
+
+   
     <!-- Junta Directiva -->
     <div class="team">
 
@@ -188,7 +283,20 @@
         </div>
         
         <!-- Resto de los miembros -->
-        
+
+
+
+
+
+
+
+
+    </div>
+    <!-- Información de contacto -->
+    <div class="contact-info">
+        <h3>Contacto</h3>
+        <p>Si tienes alguna pregunta o deseas más información, no dudes en escribirnos a:</p>
+        <p>Email: contacto@astrochias.org</p>
     </div>
 
     <!-- Footer -->
@@ -196,5 +304,12 @@
         © 2024 Astrochias - Todos los derechos reservados.
     </div>
 
+    <script>
+        // Función para mostrar y ocultar el menú en dispositivos móviles
+        function toggleMenu() {
+            const navbarMobile = document.querySelector('.navbar-mobile');
+            navbarMobile.style.display = navbarMobile.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
 </body>
 </html>
