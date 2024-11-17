@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Junta Directiva </title>
+    <title>Junta Directiva</title>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@800&family=Azo+Sans:wght@400&display=swap" rel="stylesheet">
     <style>
         body {
@@ -49,10 +49,10 @@
             color: #eb5a64;
         }
 
-                /* Estilo del equipo */
+        /* Estilo del equipo */
         .team {
             display: flex;
-            flex-wrap: column;
+            flex-direction: column; /* Cambié a column para tener una fila por perfil */
             justify-content: space-between;
             gap: 20px;
             padding: 40px;
@@ -62,8 +62,8 @@
 
         .team-member {
             display: flex;
+            flex-direction: column; /* Cada perfil en una fila */
             align-items: center;
-            width: 30%;
             background-color: #fff;
             padding: 15px;
             border-radius: 8px;
@@ -75,11 +75,11 @@
             height: 80px;
             object-fit: cover;
             border-radius: 50%;
-            margin-left: 20px;
+            margin-bottom: 10px;
         }
 
         .team-member div {
-            text-align: left;
+            text-align: center;
         }
 
         .member-name {
@@ -120,76 +120,24 @@
             background-color: #eb5a64;
         }
 
-/* Encabezado */
-.header {
-    display: flex;
-    justify-content: center; /* Centrado horizontal */
-    align-items: center; /* Centrado vertical */
-    text-align: center; /* Centrado del texto */
-    background-color: #642382; /* Color de la franja */
-    width: 100%; /* Ancho completo */
-    height: 200px; /* Altura ajustable según necesidades */
-}
-
-/* Estilo del texto */
-.header h1 {
-    font-family: 'Jost', sans-serif;
-    font-size: 40px;
-    font-weight: 800;
-    color: #f07855; /* Color del texto */
-    margin: 50px 0 0 0;
-}
-
-
-        /* Sección de contenido */
-        .content {
-            padding: 20px;
-            color: #642382;
-            text-align: justify;
-            max-width: 800px;
-            margin: auto;
-            position: relative;
-            z-index: 1;
-            background-image: url('images/logoopaco2.png'); /* Imagen de fondo en el contenido */
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            background-color: transparent;
-            padding: 40px;
-            border-radius: 8px;
+        /* Encabezado */
+        .header {
+            display: flex;
+            justify-content: center; /* Centrado horizontal */
+            align-items: center; /* Centrado vertical */
+            text-align: center; /* Centrado del texto */
+            background-color: #642382; /* Color de la franja */
+            width: 100%; /* Ancho completo */
+            height: 200px; /* Altura ajustable según necesidades */
         }
 
-        h2 {
+        /* Estilo del texto */
+        .header h1 {
             font-family: 'Jost', sans-serif;
-            color: #642382;
+            font-size: 40px;
             font-weight: 800;
-        }
-
-        /* Información de contacto */
-        .contact-info {
-            background-color: #642382;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .contact-info h3 {
-            margin: 0;
-            font-size: 24px;
-            font-family: 'Jost', sans-serif;
-        }
-
-        .contact-info p {
-            font-size: 16px;
-        }
-
-        /* Footer */
-        .footer {
-            background-color: #642382;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            font-size: 14px;
+            color: #f07855; /* Color del texto */
+            margin: 50px 0 0 0;
         }
 
         /* Responsive design */
@@ -199,21 +147,13 @@
                 justify-content: space-between;
                 padding: 10px;
             }
-      /* Responsive */
-        @media (max-width: 768px) {
+
             .team-member {
-                flex-direction: column;
                 align-items: center;
                 text-align: center;
+                margin-bottom: 20px;
             }
 
-            .team-member img {
-                margin-left: 0;
-                margin-bottom: 10px;
-            }
-
-
-            
             .navbar {
                 display: none; /* Ocultar menú de barra en móvil */
             }
@@ -258,9 +198,6 @@
             <a href="blog.html">Blog</a>
             <a href="join.html">Únete</a>
             <a href="contact.html">Contacto</a>
-            <a></a>
-            <a></a>
-            <a></a>
         </div>
         <!-- Botón de menú en dispositivos móviles -->
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
@@ -282,71 +219,60 @@
         <h1>Junta Directiva</h1>
     </div>
 
-
-
-    
     <!-- Main content -->
     <div class="content">
-
         <section>
+            <div class="team">
+                <div class="team-member">
+                    <img src="images/junta/lauren.jpg" alt="Lauren Flor Torres">
+                    <div>
+                        <p class="member-name">Lauren Flor Torres</p>
+                        <p class="member-profile">Docente pregrado de Astronomía, Universidad de Antioquia. PhD en Astrofísica. Sud áreas de interés son Astrofísica estelar, planetaria, etnoastronomía y divulgación. Cofundadora de CHIA, Colombiana Haciendo Investigación en Astrociencias.  Adicionalmente dirige el grupo de divulgación Hermes- Mensajeros de la ciencia.</p>
+                    </div>
+                </div>
 
-    <div class="team">
-        <div class="team-member">
-            <div>
-                <p class="member-name">Lauren Flor Torres</p>
-                <p class="member-profile">Docente pregrado de Astronomía, Universidad de Antioquia. PhD en Astrofísica. Sud áreas de interés son Astrofísica estelar, planetaria, etnoastronomía y divulgación. Cofundadora de CHIA, Colombiana Haciendo Investigación en Astrociencias.  Adicionalmente dirige el grupo de divulgación Hermes- Mensajeros de la ciencia.</p>
-            </div>
-            <img src="images/junta/lauren.jpg" alt="Lauren Flor Torres">
-        </div>
+                <div class="team-member">
+                    <img src="images/junta/valentina.jpeg" alt="Valentina Abril Melgarejo">
+                    <div>
+                        <p class="member-name">Valentina Abril Melgarejo</p>
+                        <p class="member-profile">Perfil de la persona 2.</p>
+                    </div>
+                </div>
 
-        <div class="team-member">
-            <div>
-                <p class="member-name">Valentina Abril Melgarejo</p>
-                <p class="member-profile">Perfil de la persona 2.</p>
-            </div>
-            <img src="images/junta/valentina.jpeg" alt="Valentina Abril Melgarejo">
-        </div>
+                <div class="team-member">
+                    <img src="images/junta/maria.jpeg" alt="Maria Gracia Batista">
+                    <div>
+                        <p class="member-name">Maria Gracia Batista</p>
+                        <p class="member-profile">Perfil de la persona 3.</p>
+                    </div>
+                </div>
 
-        <div class="team-member">
-            <div>
-                <p class="member-name">Maria Gracia Batista</p>
-                <p class="member-profile">Perfil de la persona 3.</p>
-            </div>
-            <img src="images/junta/maria.jpeg" alt="Maria Gracia Batista">
-        </div>
+                <div class="team-member">
+                    <img src="images/junta/luz.jpg" alt="Luz Ángela García">
+                    <div>
+                        <p class="member-name">Luz Ángela García</p>
+                        <p class="member-profile">Perfil de la persona 4.</p>
+                    </div>
+                </div>
 
-        <div class="team-member">
-            <div>
-                <p class="member-name">Luz Ángela García</p>
-                <p class="member-profile">Perfil de la persona 4.</p>
-            </div>
-            <img src="images/junta/luz.jpg" alt="Luz Ángela García">
-        </div>
+                <div class="team-member">
+                    <img src="images/junta/andrea.jpg" alt="Andrea Gúzman Mesa">
+                    <div>
+                        <p class="member-name">Andrea Gúzman Mesa</p>
+                        <p class="member-profile">Perfil de la persona 5.</p>
+                    </div>
+                </div>
 
-        <div class="team-member">
-            <div>
-                <p class="member-name">Andrea Gúzman Mesa</p>
-                <p class="member-profile">Perfil de la persona 5.</p>
+                <div class="team-member">
+                    <img src="images/junta/ana.jpg" alt="Ana Mikkler">
+                    <div>
+                        <p class="member-name">Ana Mikkler</p>
+                        <p class="member-profile">Perfil de la persona 6.</p>
+                    </div>
+                </div>
             </div>
-            <img src="images/junta/andrea.jpg" alt="Andrea Gúzman Mesa">
-        </div>
-
-        <div class="team-member">
-            <div>
-                <p class="member-name">Ana Mikkler</p>
-                <p class="member-profile">Perfil de la persona 6.</p>
-            </div>
-            <img src="images/junta/ana.jpg" alt="Ana Mikkler">
-        </div>
-    </div>
-            
         </section>
-
-
     </div>
-
-
-
     
     <!-- Información de contacto -->
     <div class="contact-info">
