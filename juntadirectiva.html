@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Junta Directiva</title>
+    <title>Sobre CHIA</title>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@800&family=Azo+Sans:wght@400&display=swap" rel="stylesheet">
     <style>
         body {
@@ -13,7 +13,7 @@
             background-color: #f9f9f9;
         }
 
-                /* Barra superior */
+        /* Barra superior */
         .top-bar {
             background-color: white;
             color: #642382;
@@ -28,10 +28,7 @@
             z-index: 10;
         }
 
-        .top-bar img {
-            height: 50px; /* Ajusta el tamaño del logo */
-        }
-
+        /* Menú y diseño */
         .navbar {
             display: flex;
             gap: 30px;
@@ -45,151 +42,157 @@
             font-weight: normal;
         }
 
-        .navbar a:hover {
-            color: #eb5a64;
-        }
-
-        /* Menú desplegable para móviles */
-        .menu-toggle {
-            display: none;
-        }
-
-        .navbar-mobile {
-            display: none;
-            flex-direction: column;
-            align-items: center;
-            position: absolute;
-            top: 60px;
-            left: 0;
-            width: 100%;
-            background-color: white;
-            border-top: 2px solid #642382;
-        }
-
-        .navbar-mobile a {
-            padding: 10px;
-            width: 100%;
-            text-align: center;
-        }
-
-        .navbar-mobile a:hover {
-            background-color: #eb5a64;
-        }
-        
-
-/* Encabezado */
-.header {
-    display: flex;
-    justify-content: center; /* Centrado horizontal */
-    align-items: center; /* Centrado vertical */
-    text-align: center; /* Centrado del texto */
-    background-color: #642382; /* Color de la franja */
-    width: 100%; /* Ancho completo */
-    height: 200px; /* Altura ajustable según necesidades */
-}
-
-/* Estilo del texto */
-.header h1 {
-    font-family: 'Jost', sans-serif;
-    font-size: 40px;
-    font-weight: 800;
-    color: #f07855; /* Color del texto */
-    margin: 50px 0 0 0;
-}
-
+        /* Estilo del equipo */
         .team {
-            max-width: 800px;
-            margin: 20px auto;
             display: flex;
-            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-between;
             gap: 20px;
+            padding: 40px;
+            max-width: 1200px;
+            margin: auto;
         }
 
         .team-member {
             display: flex;
             align-items: center;
-            gap: 20px;
-            background-color: #ffffff;
-            padding: 10px;
+            width: 30%;
+            background-color: #fff;
+            padding: 15px;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .team-member img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
+            width: 80px; /* Tamaño fijo de las imágenes */
+            height: 80px;
             object-fit: cover;
-            flex-shrink: 0;
+            border-radius: 50%;
+            margin-left: 20px;
         }
 
         .team-member div {
-            flex-grow: 1;
+            text-align: left;
         }
 
         .member-name {
-            font-family: 'Jost', sans-serif;
             font-size: 18px;
-            font-weight: 800;
+            font-weight: bold;
             color: #642382;
-            margin: 0 0 5px 0;
         }
 
         .member-profile {
             font-size: 14px;
-            color: #555555;
-            margin: 0;
+            color: #555;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .team-member {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .team-member img {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Junta Directiva</h1>
+
+    <!-- Barra superior -->
+    <div class="top-bar">
+        <img src="images/logoCHIA_.png" alt="Logo de Chia">
+        <div class="navbar">
+            <a href="index.html">Inicio</a>
+            <a href="about.html">Sobre CHIA</a>
+            <a href="juntadirectiva.html">Junta Directiva</a>
+            <a href="events.html">Eventos</a>
+            <a href="blog.html">Blog</a>
+            <a href="join.html">Únete</a>
+            <a href="contact.html">Contacto</a>
+        </div>
     </div>
 
+    <!-- Encabezado -->
+    <div class="header">
+        <h1>Junta Directiva de CHIA</h1>
+    </div>
+
+    <!-- Miembros del equipo -->
     <div class="team">
         <div class="team-member">
-            <img src="images/junta/lauren.jpg" alt="Lauren Flor Torres">
             <div>
                 <p class="member-name">Lauren Flor Torres</p>
                 <p class="member-profile">Perfil de la persona 1.</p>
             </div>
+            <img src="images/junta/lauren.jpg" alt="Lauren Flor Torres">
         </div>
+
         <div class="team-member">
-            <img src="images/junta/valentina.jpeg" alt="Valentina Abril Melgarejo">
             <div>
                 <p class="member-name">Valentina Abril Melgarejo</p>
                 <p class="member-profile">Perfil de la persona 2.</p>
             </div>
+            <img src="images/junta/valentina.jpeg" alt="Valentina Abril Melgarejo">
         </div>
+
         <div class="team-member">
-            <img src="images/junta/maria.jpeg" alt="Maria Gracia Batista">
             <div>
                 <p class="member-name">Maria Gracia Batista</p>
                 <p class="member-profile">Perfil de la persona 3.</p>
             </div>
+            <img src="images/junta/maria.jpeg" alt="Maria Gracia Batista">
         </div>
+
         <div class="team-member">
-            <img src="images/junta/luz.jpg" alt="Luz Ángela García">
             <div>
                 <p class="member-name">Luz Ángela García</p>
                 <p class="member-profile">Perfil de la persona 4.</p>
             </div>
+            <img src="images/junta/luz.jpg" alt="Luz Ángela García">
         </div>
+
         <div class="team-member">
-            <img src="images/junta/andrea.jpg" alt="Andrea Gúzman Mesa">
             <div>
                 <p class="member-name">Andrea Gúzman Mesa</p>
                 <p class="member-profile">Perfil de la persona 5.</p>
             </div>
+            <img src="images/junta/andrea.jpg" alt="Andrea Gúzman Mesa">
         </div>
+
         <div class="team-member">
-            <img src="images/junta/ana.jpg" alt="Ana Mikkler">
             <div>
                 <p class="member-name">Ana Mikkler</p>
                 <p class="member-profile">Perfil de la persona 6.</p>
             </div>
+            <img src="images/junta/ana.jpg" alt="Ana Mikkler">
         </div>
     </div>
+
+        <!-- Información de contacto -->
+    <div class="contact-info">
+        <h3>Contacto</h3>
+        <p>Si tienes alguna pregunta o deseas más información, no dudes en escribirnos a:</p>
+        <p>Email: contacto@astrochias.org</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        © 2024 Astrochias - Todos los derechos reservados.
+    </div>
+
+    <script>
+        // Función para mostrar y ocultar el menú en dispositivos móviles
+        function toggleMenu() {
+            const navbarMobile = document.querySelector('.navbar-mobile');
+            navbarMobile.style.display = navbarMobile.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+
+
+    
 </body>
 </html>
