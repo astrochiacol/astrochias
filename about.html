@@ -76,27 +76,33 @@
             background-color: #eb5a64;
         }
 
-/* Encabezado */
+/* Encabezado con imagen de fondo */
 .header {
-    display: flex; /* Flexbox para control de alineación */
+    display: flex; /* Flexbox para alinear contenido */
     justify-content: center; /* Centrado horizontal */
     align-items: center; /* Centrado vertical */
-    text-align: center; /* Asegura que el texto quede centrado dentro del contenedor */
-    background-color: #642382; /* Color de fondo */
-    width: 100%; /* Ancho total */
-    height: 100px; /* Altura fija (ajústala según tus necesidades) */
-    padding: 0; /* Elimina márgenes y relleno innecesarios */
+    text-align: center;
+    background-image: url('superior.png'); /* Imagen de fondo */
+    background-size: cover; /* Escala la imagen para cubrir el ancho completo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    width: 100%; /* Abarca todo el ancho */
+    height: 300px; /* Ajusta la altura según lo requerido */
+    padding: 0; /* Sin relleno adicional */
+    position: relative; /* Necesario para superponer texto */
 }
 
-/* Estilo del texto */
+/* Estilo del texto en el encabezado */
 .header h1 {
     font-family: 'Jost', sans-serif;
     font-size: 40px;
-    font-weight: 800; /* Para mayor énfasis */
+    font-weight: 800; /* Énfasis en el texto */
     color: #f07855; /* Color del texto */
-    margin: 0; /* Quita márgenes */
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejor contraste */
+    padding: 10px 20px; /* Espaciado interno del texto */
+    border-radius: 5px; /* Bordes redondeados para el fondo */
+    margin: 0; /* Sin márgenes */
 }
-
 
 
         /* Sección de contenido */
@@ -222,7 +228,7 @@
     </div>
 
     <!-- Imagen de fondo y texto del encabezado -->
-    <div class="content">
+    <div class="header">
         <h1>Sobre CHIA</h1>
     </div>
 
