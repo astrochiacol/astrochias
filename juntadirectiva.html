@@ -28,7 +28,10 @@
             z-index: 10;
         }
 
-        /* Menú y diseño */
+        .top-bar img {
+            height: 50px; /* Ajusta el tamaño del logo */
+        }
+
         .navbar {
             display: flex;
             gap: 30px;
@@ -42,60 +45,144 @@
             font-weight: normal;
         }
 
-        /* Estilo del equipo */
-        .team {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 20px;
-            padding: 40px;
-            max-width: 1200px;
-            margin: auto;
+        .navbar a:hover {
+            color: #eb5a64;
         }
 
-        .team-member {
-            display: flex;
+        /* Menú desplegable para móviles */
+        .menu-toggle {
+            display: none;
+        }
+
+        .navbar-mobile {
+            display: none;
+            flex-direction: column;
             align-items: center;
-            width: 30%;
-            background-color: #fff;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            border-top: 2px solid #642382;
         }
 
-        .team-member img {
-            width: 80px; /* Tamaño fijo de las imágenes */
-            height: 80px;
-            object-fit: cover;
-            border-radius: 50%;
-            margin-left: 20px;
+        .navbar-mobile a {
+            padding: 10px;
+            width: 100%;
+            text-align: center;
         }
 
-        .team-member div {
-            text-align: left;
+        .navbar-mobile a:hover {
+            background-color: #eb5a64;
         }
 
-        .member-name {
-            font-size: 18px;
-            font-weight: bold;
+/* Encabezado */
+.header {
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    text-align: center; /* Centrado del texto */
+    background-color: #642382; /* Color de la franja */
+    width: 100%; /* Ancho completo */
+    height: 200px; /* Altura ajustable según necesidades */
+}
+
+/* Estilo del texto */
+.header h1 {
+    font-family: 'Jost', sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    color: #f07855; /* Color del texto */
+    margin: 50px 0 0 0;
+}
+
+
+        /* Sección de contenido */
+        .content {
+            padding: 20px;
             color: #642382;
+            text-align: justify;
+            max-width: 800px;
+            margin: auto;
+            position: relative;
+            z-index: 1;
+            background-image: url('images/logoopaco2.png'); /* Imagen de fondo en el contenido */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: transparent;
+            padding: 40px;
+            border-radius: 8px;
         }
 
-        .member-profile {
+        h2 {
+            font-family: 'Jost', sans-serif;
+            color: #642382;
+            font-weight: 800;
+        }
+
+        /* Información de contacto */
+        .contact-info {
+            background-color: #642382;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .contact-info h3 {
+            margin: 0;
+            font-size: 24px;
+            font-family: 'Jost', sans-serif;
+        }
+
+        .contact-info p {
+            font-size: 16px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #642382;
+            color: white;
+            text-align: center;
+            padding: 10px;
             font-size: 14px;
-            color: #555;
         }
 
-        /* Responsive */
+        /* Responsive design */
         @media (max-width: 768px) {
-            .team-member {
-                width: 100%;
-                margin-bottom: 20px;
+            .top-bar {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 10px;
             }
 
-            .team-member img {
-                margin-left: 0;
-                margin-bottom: 10px;
+            .navbar {
+                display: none; /* Ocultar menú de barra en móvil */
+            }
+
+            .menu-toggle {
+                display: block;
+                background-color: #642382;
+                color: white;
+                padding: 10px;
+                cursor: pointer;
+                font-size: 18px;
+            }
+
+            .navbar-mobile {
+                display: none; /* Inicia el menú oculto */
+            }
+
+            .content {
+                padding: 10px;
+            }
+
+            .footer {
+                font-size: 12px;
+            }
+
+            .header h1 {
+                font-size: 36px; /* Ajusta el tamaño del texto */
             }
         }
     </style>
@@ -113,66 +200,44 @@
             <a href="blog.html">Blog</a>
             <a href="join.html">Únete</a>
             <a href="contact.html">Contacto</a>
+            <a></a>
+            <a></a>
+            <a></a>
         </div>
+        <!-- Botón de menú en dispositivos móviles -->
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     </div>
 
-    <!-- Encabezado -->
+    <!-- Menú desplegable para móviles -->
+    <div class="navbar-mobile">
+        <a href="index.html">Inicio</a>
+        <a href="about.html">Sobre CHIA</a>
+        <a href="juntadirectiva.html">Junta Directiva</a>
+        <a href="events.html">Eventos</a>
+        <a href="blog.html">Blog</a>
+        <a href="join.html">Únete</a>
+        <a href="contact.html">Contacto</a>
+    </div>
+
+    <!-- Imagen de fondo y texto del encabezado -->
     <div class="header">
-        <h1>Junta Directiva de CHIA</h1>
+        <h1>Sobre CHIA</h1>
     </div>
 
-    <!-- Miembros del equipo -->
-    <div class="team">
-        <div class="team-member">
-            <div>
-                <p class="member-name">Lauren Flor Torres</p>
-                <p class="member-profile">Perfil de la persona 1.</p>
-            </div>
-            <img src="images/junta/lauren.jpg" alt="Lauren Flor Torres">
-        </div>
+    <!-- Main content -->
+    <div class="content">
 
-        <div class="team-member">
-            <div>
-                <p class="member-name">Valentina Abril Melgarejo</p>
-                <p class="member-profile">Perfil de la persona 2.</p>
-            </div>
-            <img src="images/junta/valentina.jpeg" alt="Valentina Abril Melgarejo">
-        </div>
 
-        <div class="team-member">
-            <div>
-                <p class="member-name">Maria Gracia Batista</p>
-                <p class="member-profile">Perfil de la persona 3.</p>
-            </div>
-            <img src="images/junta/maria.jpeg" alt="Maria Gracia Batista">
-        </div>
 
-        <div class="team-member">
-            <div>
-                <p class="member-name">Luz Ángela García</p>
-                <p class="member-profile">Perfil de la persona 4.</p>
-            </div>
-            <img src="images/junta/luz.jpg" alt="Luz Ángela García">
-        </div>
 
-        <div class="team-member">
-            <div>
-                <p class="member-name">Andrea Gúzman Mesa</p>
-                <p class="member-profile">Perfil de la persona 5.</p>
-            </div>
-            <img src="images/junta/andrea.jpg" alt="Andrea Gúzman Mesa">
-        </div>
 
-        <div class="team-member">
-            <div>
-                <p class="member-name">Ana Mikkler</p>
-                <p class="member-profile">Perfil de la persona 6.</p>
-            </div>
-            <img src="images/junta/ana.jpg" alt="Ana Mikkler">
-        </div>
+        
     </div>
 
-        <!-- Información de contacto -->
+
+
+    
+    <!-- Información de contacto -->
     <div class="contact-info">
         <h3>Contacto</h3>
         <p>Si tienes alguna pregunta o deseas más información, no dudes en escribirnos a:</p>
@@ -191,8 +256,5 @@
             navbarMobile.style.display = navbarMobile.style.display === 'flex' ? 'none' : 'flex';
         }
     </script>
-
-
-    
 </body>
 </html>
